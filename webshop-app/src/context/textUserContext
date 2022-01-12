@@ -1,0 +1,9 @@
+
+1) importerar in createContext & useState
+2) skapar upp en createContext (export const UserContext ) som vi exporterar sedan som en "named export"
+3) skapar innehållet/det vi vill kunna skicka vidare (const UserProvider) blir en default export som vi använder att wrappa app med
+4) skapar ett state som blir en bolean - satt till true så ni
+kan se bättre när man trycker på logga ut, men ska egentligen vara false
+5) Providern tar ett värde/value som blir våra states
+6) <UserContext.Provider> kommer hålla alla "barn" som den ska wrappa  (app-komponenten) och kommer lyftas in
+som ett props - {children}
