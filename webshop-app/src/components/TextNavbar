@@ -1,0 +1,17 @@
+1) tar in Links för att kunna göra länkar
+2) tar in useContext för att kunna ta in states vi skapat i UserContext
+4) hämtar states från useContext(UserContext)
+
+handleLogOut() - kommer sättas som en eventlistener på 
+button i LoggedIn() som används för att logga ut. Håller statet setLoggedIn (boolean)
+
+LoggedIn() - är den navbaren du ser när du är inloggad, 
+den har länkar och logga ut knapp på sig.
+
+LoggedOut() - är d länkar du ser som utloggad. 
+
+i returnen sätter vi vårt state som är "loggedIn" den jobbar ihop 
+med vår knapp i LoggedIn.
+
+!!-- Nu är statet felaktigt satt till true i UserContext så att att ni ska kunna se båda vyerna, hade det varit satt till 
+false hade ni bara sett login länken, nu ser ni logOut knappen och kan toggla till Login ---!!!
