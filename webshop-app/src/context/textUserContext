@@ -1,4 +1,7 @@
 
+
+Skapa upp ett context för att kunna skicka states vidare:
+
 1) importerar in createContext & useState
 2) skapar upp en createContext (export const UserContext ) som vi exporterar sedan som en "named export"
 3) skapar innehållet/det vi vill kunna skicka vidare (const UserProvider) blir en default export som vi använder att wrappa app med
@@ -7,3 +10,10 @@ kan se bättre när man trycker på logga ut, men ska egentligen vara false
 5) Providern tar ett värde/value som blir våra states
 6) <UserContext.Provider> kommer hålla alla "barn" som den ska wrappa  (app-komponenten) och kommer lyftas in
 som ett props - {children}
+
+För att göra navbaren i två olika vyer:
+* loggedIn och setLoggedIn är states vi behöver för att göra navbaren i två olika vyer
+
+För att kunna skicka med användarnamnet i urlfältet och till en annan sida:
+* user , setUser - dessa sätts till en array med en tom sträng för att sedan kunna fylla med sträng från inputfältet i login
+

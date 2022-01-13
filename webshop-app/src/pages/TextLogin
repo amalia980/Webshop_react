@@ -1,0 +1,14 @@
+1) hämtar useContext, och UserContext så vi kan ta in våra states 
+2) tar in useState så vi kan skapa nya states
+3) tar in UseNavigate så vi kan navigera när vi trycker på login knappen i form
+
+
+handleInput() 
+Kopierar in de uppgifter vi får in från Inputfältet till user, nu har jag bara satt den på inputfältet med namn för
+det är det värdet jag har använt mig använt
+
+
+handleLogIn()
+e.preventDefault för att sidan inte ska laddas om
+om setLoggedIn är true vill vi navigera till account och stoppa in user.firstname i url,en
+
