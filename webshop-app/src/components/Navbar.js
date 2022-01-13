@@ -18,10 +18,10 @@ const Navbar = () => {
       <>
         <nav>
           <div className="links">
+            <Link className="navLinks" to="/shop">Shop</Link>
             <Link className="navLinks" to="/account">
               Account
             </Link>
-            <Link className="navLinks" to="/shop">Shop</Link>
           </div>
 
           <div className="navButtons">

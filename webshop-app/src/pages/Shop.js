@@ -6,16 +6,24 @@ const Shop = () => {
     return (
         <div className='container'>
             <div className='wrapper-products'>
+
                 <div className='card'>
-                    <p>title</p>
-                    <p>price</p>
-                    <button>Add to Cart</button>
-                </div>
+                    <div>
+                        <img className="img" src="#"/>
+                            <div className='card-txts'>
+                                <h3>title</h3>
+                                <h4>price</h4>
+                            </div>
+                        <button className='btn-card'>Add to Cart</button>
+                    </div>
+                </div>          
             </div>
 
             <div className='wrapper-cart'>
                 <div className='cart'>
-                    <p>Cart</p>
+                    <div>
+                        <h2>Cart</h2>
+                    </div>
                 </div>
             </div>
         </div>
