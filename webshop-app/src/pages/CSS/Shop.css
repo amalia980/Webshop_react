@@ -1,0 +1,35 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+}
+
+.wrapper-products {
+    width: 80%;
+    padding: 4rem;
+    flex: 1;
+    background-color: #E5E5E5;
+}
+
+.wrapper-cart {
+    background-color: #E5E5E5;
+    width: 20%;
+    height: 100vh;
+}
+
+.card {
+    width: 15rem;
+    height:20rem;
+    background-color: white;
+    border-radius: 18px;
+}
+
+.cart {
+    width: 18rem;
+    height: 25rem;
+    background-color: white;
+    margin: 4rem 3rem 4rem 3rem;
+    border-radius: 18px;
+
+}
