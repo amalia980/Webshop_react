@@ -1,9 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Account from "./pages/Account"
 import Login from "./pages/Login"
+import Shop from './pages/Shop';
 import ShowInDom from "./ShowInDom"
 
 function App() {
+
   return (
     <>
     <BrowserRouter>
@@ -11,9 +13,9 @@ function App() {
       <Route path="/" element={ <ShowInDom />}>
         <Route path="login" element={ <Login />} />
         <Route path="account" element={ <Account />} />
+        <Route path="shop" element={<Shop />}/>
       </Route>
     </Routes>
-    
     </BrowserRouter>
     </>
 

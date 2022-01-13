@@ -18,6 +18,7 @@ const Navbar = () => {
             <Link className="navLinks" to="/account">
               Account
             </Link>
+            <Link className="navLinks" to="/shop">Shop</Link>
           </div>
 
           <div className="navButtons">
