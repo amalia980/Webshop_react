@@ -9,7 +9,7 @@ const ProductUser = ({children}) => {
     
     return(
         <>
-            <ProductContext.Provider>
+            <ProductContext.Provider value={{products, setProducts}}>
                 {children}
             </ProductContext.Provider>
         </>

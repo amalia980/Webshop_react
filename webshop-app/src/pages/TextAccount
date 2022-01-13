@@ -1,0 +1,2 @@
+* Tar in user från useContext och UserContext så vi får tillgång till användarnamnet från
+  inputfältet i Login

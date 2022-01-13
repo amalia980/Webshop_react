@@ -1,9 +1,15 @@
-import React from 'react'
+import { useContext } from "react"
+import { UserContext } from "../context/UserContext"
+import './CSS/Account.css'
 
 const Account = () => {
+    
+    const {user} = useContext(UserContext)
+
     return (
-        <div>
-            <h2>hello from account</h2>
+        <div className="bodyAccount">
+            <h2>Account</h2>
+            <p className="welcomeText">Welcome {user.firstname}!</p>
         </div>
     )
 }
