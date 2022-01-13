@@ -11,9 +11,9 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path="/" element={ <ShowInDom />}>
+        <Route path="shop" element={<Shop />}/>
         <Route path="login" element={ <Login />} />
         <Route path="account" element={ <Account />} />
-        <Route path="shop" element={<Shop />}/>
       </Route>
     </Routes>
     </BrowserRouter>

@@ -11,10 +11,10 @@ const Shop = () => {
                     <div>
                         <img className="img" src="#"/>
                             <div className='card-txts'>
-                                <h3>title</h3>
-                                <h4>price</h4>
-                                <button className='btn-card'>Add to Cart</button>
+                                <h3 className='card-text'>title</h3>
+                                <h4 className='card-text'>price</h4>
                             </div>
+                            <button className='btn-card'>Add to Cart</button>
                     </div>
                 </div>          
             </div>
