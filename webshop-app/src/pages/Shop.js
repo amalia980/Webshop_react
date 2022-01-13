@@ -13,8 +13,8 @@ const Shop = () => {
                             <div className='card-txts'>
                                 <h3>title</h3>
                                 <h4>price</h4>
+                                <button className='btn-card'>Add to Cart</button>
                             </div>
-                        <button className='btn-card'>Add to Cart</button>
                     </div>
                 </div>          
             </div>
