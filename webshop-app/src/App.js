@@ -11,6 +11,7 @@ function App() {
       <Route path="/" element={ <ShowInDom />}>
         <Route path="login" element={ <Login />} />
         <Route path="account" element={ <Account />} />
+        <Route path="account/:firstname/" element={<Account />} />
       </Route>
     </Routes>
     
