@@ -23,6 +23,7 @@
     border-radius: 18px;
     display: flex;
     justify-content: center;
+    margin-bottom: 2rem;
 }
 
 .img {
@@ -57,7 +58,7 @@
 
 .cart {
     width: 20rem;
-    height: 28rem;
+    min-height: 28rem;
     background-color: white;
     margin: 4rem 3rem 4rem 0;
     border-radius: 18px;
