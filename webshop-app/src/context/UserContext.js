@@ -5,7 +5,7 @@ export const UserContext = createContext();
 const UserProvider = ({children}) => {
   const [loggedIn, setLoggedIn] = useState(true);
 
-  const [user, setUser] = useState({firstname: ""})
+  const [user, setUser] = useState({firstname: "", lastname: ""})
 
   
   return (
