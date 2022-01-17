@@ -5,7 +5,7 @@ import "./CSS/Login.css";
 
 const Login = () => {
   const navigate = useNavigate();
-  // const { firstname, password } = useParams();
+
   const { setLoggedIn } = useContext(UserContext);
 
   const [loginUser, setLoginUser] = useState({
@@ -23,7 +23,6 @@ const Login = () => {
   const handleLoginUser = (e) => {
     e.preventDefault();
     setLoggedIn(true);
-    // firstname && password ? setUser({...loginUser, firstname, password }) : setUser({...loginUser, firstname, password});
     navigate(`/account/${loginUser.firstname}/${loginUser.lastname}`);
   };
 
