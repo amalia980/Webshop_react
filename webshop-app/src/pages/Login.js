@@ -1,30 +1,20 @@
 import { useState, useContext } from "react";
 import { UserContext } from "../context/UserContext";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./CSS/Login.css";
 
 const Login = () => {
   const navigate = useNavigate();
-  const { firstname, password } = useParams();
-  const { setUser, setLoggedIn } = useContext(UserContext);
 
-  const [loginUser, setLoginUser] = useState({
-    firstname: "",
-    lastname: "",
-    password: "",
-    adress: "",
-    city: "",
-  });
+  const {user, setUser } = useContext(UserContext);
 
   const handleInput = (e) => {
-    setLoginUser({...loginUser, [e.target.name]: e.target.value });
+    setUser({...user, [e.target.name]: e.target.value });
   };
 
   const handleLoginUser = (e) => {
     e.preventDefault();
-    setLoggedIn(true);
-    firstname && password ? setUser({...loginUser, firstname, password }) : setUser({...loginUser, firstname, password});
-    navigate(`/account/${loginUser.firstname}/${loginUser.lastname}`);
+    navigate(`/account/${user.firstname}/${user.lastname}`);
   };
 
   return (
