@@ -1,43 +1,43 @@
-.container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-
-}
 
 /*left side, products*/
 
 .wrapper-products {
-    width: 80%;
-    padding: 4rem 0 4rem 4rem;
-    flex: 1;
+    width: 100%;
+    min-height: 100vh;
+    padding: 4rem 4rem 4rem 4rem;
     background-color: #E5E5E5;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+ 
+}
+
+.cards {
+    width: 15rem;
+    height: 23rem;
+    background-color: white;
+    border-radius: 18px;
+
 }
 
 .card {
-    width: 15rem;
-    height: 20.5rem;
-    background-color: white;
-    border-radius: 18px;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2rem;
+    margin-left: 1.5rem;
 }
+
 
 .img {
     width: 12rem;
     height: 12rem;
     margin-top: 1.5rem;
+    object-fit: cover;
 }
 
 .card-txts {
-    margin: 0.5rem;
+    width: 11.8rem;
 }
 
 .card-text {
-    margin: 0;
+    margin: 0.7rem;
 }
 
 .btn-card {
@@ -47,20 +47,4 @@
     border: none;
     background-color: rgb(197, 197, 197);
     cursor: pointer;
-}
-
-/*right side. cart*/
-.wrapper-cart {
-    background-color: #E5E5E5;
-    width: 20%;
-    height: 100vh;
-}
-
-.cart {
-    width: 20rem;
-    min-height: 28rem;
-    background-color: white;
-    margin: 4rem 3rem 4rem 0;
-    border-radius: 18px;
-    padding: 1.5rem;
 }
