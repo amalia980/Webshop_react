@@ -27,3 +27,22 @@ nav{
     margin-right: 2.5rem;
     font-size: 1.3rem;
 }
+
+/*Cart*/
+.cartBtn {
+    cursor: pointer;
+    background-color: white;
+    border:none;
+    color:#212121;;
+    margin-right: 2.5rem;
+    font-size: 1rem;
+    padding:  .4rem .7rem;
+    border-radius: 5%;
+    
+}
+
+.cartBtn:hover {
+    background-color:#212121;
+    color: white;
+    border: 1px solid white;
+}
