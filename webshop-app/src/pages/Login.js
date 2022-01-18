@@ -30,6 +30,7 @@ const Login = () => {
        <h2>Optional</h2>
        <input name="adress" placeholder="Adress" onChange={handleInput} />
        <input name="city" placeholder="City" onChange={handleInput} />
+       <input name="zipCode" placeholder="Zip Code" onChange={handleInput} />
         <button className="loginButton" type="submit">Login</button>
        </form>
     </div>
