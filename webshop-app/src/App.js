@@ -12,6 +12,7 @@ function App() {
       <Route path="/" element={ <ShowInDom />}>
         <Route index element={<Shop />}/>
         <Route path="login" element={ <Login />} />
+        <Route path="shop" element={ <Shop />} />
         <Route path="shop/:firstname/:lastname/" element={ <Shop />} />
       </Route>
     </Routes>
