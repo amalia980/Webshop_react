@@ -1,12 +1,12 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
 import { useNavigate } from "react-router-dom";
 import "./CSS/Login.css";
 
 const Login = () => {
   const navigate = useNavigate();
-
-  const {user, setUser } = useContext(UserContext);
+  
+  const {user, setUser, setLoggedIn } = useContext(UserContext);
 
   const handleInput = (e) => {
     setUser({...user, [e.target.name]: e.target.value });
@@ -14,8 +14,10 @@ const Login = () => {
 
   const handleLoginUser = (e) => {
     e.preventDefault();
+    setLoggedIn(true);
     navigate(`/account/${user.firstname}/${user.lastname}`);
   };
+
 
   return (
   <>
