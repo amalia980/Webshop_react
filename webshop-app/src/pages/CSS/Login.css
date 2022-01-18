@@ -1,6 +1,6 @@
 .loginForm {
     margin:auto;
-    margin-top:15px;
+    margin-top:25px;
     padding: 15px;
     width: 200px;
     height: auto;
@@ -34,4 +34,8 @@
 
 .loginForm input, button {
     margin-top:5px;
+}
+
+.loginForm h2 {
+    margin-top:15px;
 }
