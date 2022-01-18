@@ -4,14 +4,17 @@ import './index.css';
 import App from './App';
 import UserProvider from './context/UserContext';
 import ProductUser from './context/ProductContext';
+import CartProvider from './context/CartContext';
 
 
 ReactDOM.render(
   <React.StrictMode>
     <UserProvider>
-      <ProductUser>
-        <App />
-     </ProductUser>
+      <CartProvider>
+        <ProductUser>
+          <App />
+      </ProductUser>
+     </CartProvider>
     </UserProvider>
   </React.StrictMode>,
   document.getElementById('root')

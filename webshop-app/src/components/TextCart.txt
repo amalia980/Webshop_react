@@ -1,0 +1,28 @@
+Cart.js - 
+komponent som använder CartContext. 
+Returnerar en <p></p> om det inte finns några varor i varukorgen genom ett ternary expression.
+Länk till checkout.
+
+CartContext.js -
+Skapar ett context som heter CartContext.
+Skapar en funktion som heter BasketProvider som tar in sina {children} som en prop.
+State för basket, set basket som är en tom array by default där vi sedan kan lägga till produkter.
+State för basketVisible, setBasketVisible. Boolean satt som default false vilket betyder att den inte syns.
+Return - Med hjälp utav provider skickar vi värden till BasketContext barn så att vi kan använda dessa states i alla barnkomponenter. 
+
+index.js -
+wrappar <BasketProvider> runt app komponenten i index.js
+
+Navbar.js -
+Importerar CarttContext.
+Definierar att basketVisible och setCartVisible ska användas från BasketContext.
+Skapar en konstant som heter handleBasketVisibility vilket returnerar en funktion bed ett ternary expression.
+om basket är synlig returneras en knapp "Close basket" med ett onClick event som ändrar setBasketVisible till (false) och alltså döljer basket. 
+om basket inter är synlig returneras istället en knapp "Basket" med ett onClick event på sig som sääter setBasketVisible till true och alltså visar basket.
+{handleBasketVisibility()} funktionen är satt i LoggedIn tillsammans med 
+{cartVisible && <Cart />} som visar Cart om cartVisible är true
+
+-Egen styling på basketknapparna. className="basketBtn" i Navbar.css
+
+
+ta bort cart styling från shop
