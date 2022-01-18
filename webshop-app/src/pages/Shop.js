@@ -1,10 +1,17 @@
+import { useContext } from "react"
+import { UserContext } from "../context/UserContext"
 import './CSS/Shop.css';
 import products from '../services/products';
 
 const Shop = () => {
 
+    const {user} = useContext(UserContext);
 
     return (
+        <>
+        <div className="bodyAccount">
+            <h2 className="welcomeText">Welcome {user.firstname}!</h2>
+        </div>
             <div className='wrapper-products'>
 
                 {products.map((item) => (
@@ -18,9 +25,9 @@ const Shop = () => {
                             <button className='btn-card'>Add to Cart</button>
                         </div>
                     </div>
-                ))}
-                          
+                ))}         
             </div>
+            </>
     )
 }
 

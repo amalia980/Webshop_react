@@ -48,3 +48,7 @@
     background-color: rgb(197, 197, 197);
     cursor: pointer;
 }
+
+.bodyAccount{
+    padding: 4rem;
+}

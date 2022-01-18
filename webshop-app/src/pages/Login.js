@@ -15,9 +15,8 @@ const Login = () => {
   const handleLoginUser = (e) => {
     e.preventDefault();
     setLoggedIn(true);
-    navigate(`/account/${user.firstname}/${user.lastname}`);
+    navigate(`/shop/${user.firstname}/${user.lastname}`);
   };
-
 
   return (
   <>
