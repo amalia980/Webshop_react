@@ -15,7 +15,7 @@ const Shop = () => {
             <div className='wrapper-products'>
 
                 {products.map((item) => (
-                    <div className='cards'>
+                    <div className='cards' key={item.id}>
                     <div className='card'>
                         <img className="img" src={item.img} alt={item.title}/>
                             <div className='card-txts'>
