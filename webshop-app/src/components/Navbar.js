@@ -16,11 +16,10 @@ const Navbar = () => {
   const LoggedIn = () => {
     return (
       <>
-        <nav>
+        <nav className="loggedInNav">
           <div className="links">
             <Link className="navLinks" to="/shop">Shop</Link>
           </div>
-
           <div className="navButtons">
             <button className="navButton" onClick={handleLogOut}>Logout</button>
           </div>
@@ -32,10 +31,13 @@ const Navbar = () => {
   const LoggedOut = () => {
     return (
       <>
-        <nav>
+        <nav className="loggedOutNav">
+          <div className="links">
+          <Link className="navLinks" to="/shop">Shop</Link>
           <Link className="navLinks" to="/login">
             Login
           </Link>
+          </div>
         </nav>
       </>
     );
