@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path="/" element={ <ShowInDom />}>
-        <Route path="shop" element={<Shop />}/>
+        <Route index element={<Shop />}/>
         <Route path="login" element={ <Login />} />
         <Route path="shop/:firstname/:lastname/" element={ <Shop />} />
       </Route>
