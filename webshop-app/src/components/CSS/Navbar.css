@@ -11,6 +11,13 @@
     background-color: #212121;
 }
 
+.loggedOutNav{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    background-color: #212121;
+}
 
 .links {
     margin: 2rem;

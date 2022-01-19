@@ -2,85 +2,72 @@ import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { UserContext } from "../context/UserContext";
 import Cart from "./Cart";
-import { CartContext } from "../context/CartContext.js";
+import { CartContext } from "../context/CartContext.js"; 
 import "./CSS/Navbar.css";
 
 const Navbar = () => {
   const { loggedIn, setLoggedIn, setUser } = useContext(UserContext);
-  const { cart, cartVisible, setCartVisible } = useContext(CartContext); //basket state
+  const { cart, cartVisible, setCartVisible} = useContext(CartContext); //basket state
+  
+  
 
   const handleCartVisibility = () => {
-    return cartVisible ? (
-      <button className="cartBtn" onClick={() => setCartVisible(false)}>
-        🛒 Close Cart{" "}
-      </button>
-    ) : (
-      <button className="cartBtn" onClick={() => setCartVisible(true)}>
-        🛒Cart
-      </button>
-    );
-  };
+    return cartVisible ? <button className="cartBtn" onClick={() => setCartVisible(false)}>🛒 Close Cart </button> : <button className="cartBtn" onClick={() => setCartVisible(true)}>🛒Cart</button> 
+}
+
 
   const navigate = useNavigate();
 
   const handleLogOut = () => {
     setLoggedIn(false);
-    setUser({});
+    setUser({})
     navigate("/login");
   };
 
-  const moveToLogin = () => {
-    navigate("/login");
-  }
-
-  // skillnad har knappen LogOut
-  const navLogIn = () => {
+  const LoggedIn = () => {
     return (
       <>
         <nav className="loggedInNav">
           <div className="links">
-            <Link className="navLinks" to="/">
-              Shop
-            </Link>
+            <Link className="navLinks" to="/">Shop</Link>
+            <Link className="navLinks" to="/checkout">checkout</Link>
           </div>
           <div className="navButtons">
-    
-            <div className="navCart">
-              <span className="badge">{cart.length}</span>
-              {handleCartVisibility()}
-              {cartVisible && <Cart />}
-            </div>
+
             <button className="navButton" onClick={handleLogOut}>Logout</button>
+
+            <div className="navCart">
+            <span className="badge" >{cart.length}</span>
+              {handleCartVisibility()}
+              {cartVisible && <Cart />} 
+          </div>
+
           </div>
         </nav>
       </>
     );
   };
-  
-  // skillnad har knappen LogIn
-  const navLogOut = () => {
+
+  const LoggedOut = () => {
     return (
       <>
-        <nav className="loggedInNav">
+        <nav className="loggedOutNav">
           <div className="links">
-            <Link className="navLinks" to="/shop">
-              Shop
-            </Link>
-        
+          <Link className="navLinks" to="/shop">Shop</Link>
+          <Link className="navLinks" to="/login">
+            Login
+          </Link>
           </div>
-          <div className="navButtons">
-            <div className="navCart">
-              <span className="badge">{cart.length}</span>
+          <div className="navCart navCartLogged">
+            <span className="badge" >{cart.length}</span>
               {handleCartVisibility()}
-              {cartVisible && <Cart />}
-            </div>
-            <button onClick={moveToLogin} className="navButton" >Login</button>
+              {cartVisible && <Cart />} 
           </div>
         </nav>
       </>
     );
   };
-  return <>{loggedIn ? navLogIn() : navLogOut()}</>;
+  return <>{loggedIn ? LoggedIn() : LoggedOut()}</>;
 };
 
 export default Navbar;
