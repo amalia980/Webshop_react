@@ -7,13 +7,12 @@ import "./CSS/Navbar.css";
 
 const Navbar = () => {
   const { loggedIn, setLoggedIn, setUser } = useContext(UserContext);
-  const { cartVisible, setCartVisible} = useContext(CartContext); //basket state
+  const { cart, cartVisible, setCartVisible} = useContext(CartContext); //basket state
   
   
 
-  //Basket visibility. Om basketVisible är true visas en knapp för att stänga varukorgen annars visas en knapp för att öppna den.
   const handleCartVisibility = () => {
-    return cartVisible ? <button className="cartBtn" onClick={() => setCartVisible(false)}>🛒 Close Cart </button> : <button className="cartBtn" onClick={() => setCartVisible(true)}>🛒 Cart</button> 
+    return cartVisible ? <button className="cartBtn" onClick={() => setCartVisible(false)}>🛒 Close Cart </button> : <button className="cartBtn" onClick={() => setCartVisible(true)}>🛒Cart</button> 
 }
 
 
@@ -33,10 +32,14 @@ const Navbar = () => {
             <Link className="navLinks" to="/">Shop</Link>
           </div>
           <div className="navButtons">
-            {handleCartVisibility()}
-            {cartVisible && <Cart />} 
 
             <button className="navButton" onClick={handleLogOut}>Logout</button>
+
+            <div className="navCart">
+            <span className="badge" >{cart.length}</span>
+              {handleCartVisibility()}
+              {cartVisible && <Cart />} 
+          </div>
 
           </div>
         </nav>
@@ -53,6 +56,11 @@ const Navbar = () => {
           <Link className="navLinks" to="/login">
             Login
           </Link>
+          </div>
+          <div className="navCart navCartLogged">
+            <span className="badge" >{cart.length}</span>
+              {handleCartVisibility()}
+              {cartVisible && <Cart />} 
           </div>
         </nav>
       </>

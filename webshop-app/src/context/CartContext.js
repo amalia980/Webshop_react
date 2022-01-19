@@ -6,6 +6,8 @@ export default function CartProvider({children}) {
 
     const [cart, setCart] = useState([]);
     const [cartVisible, setCartVisible] = useState(false)
+    
+
 
   return(
       <>

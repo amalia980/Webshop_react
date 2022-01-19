@@ -79,7 +79,7 @@ const Checkout = () => {
                 value={deliveryInfo.city}
                 required
               />
-             <button className="checkoutButton" type='submit' className="checkoutButton">Make purchase</button>
+             <button className="checkoutButton" type='submit'>Make purchase</button>
             </form>
             </div>
             
