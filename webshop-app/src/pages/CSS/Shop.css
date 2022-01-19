@@ -52,3 +52,7 @@
 .bodyAccount{
     padding: 4rem;
 }
+
+.welcomeText {
+    font-family: arial;
+}
