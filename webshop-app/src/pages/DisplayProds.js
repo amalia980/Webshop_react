@@ -1,6 +1,17 @@
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
-
-const DisplayProds = ({product}) => {
+const DisplayProds = (props) => {
+    const { cart, setCart } = useContext(CartContext);
+    const {product} = props;
+    
+    const addToCart = () => {
+        const same = cart.filter((item) => item === product)
+        Object.assign(product, {
+            qty: same.length + 1,
+        });
+        setCart([...cart, product]);
+    }
 
     return (
         <>
@@ -11,7 +22,7 @@ const DisplayProds = ({product}) => {
                                 <h3 className='card-text'>{product.title}</h3>
                                 <h4 className='card-text'>${product.price}</h4>
                             </div>
-                            <button /*onClick={addToCart}*/ className='btn-card'>Add to Cart</button>
+                            <button onClick={addToCart} className='btn-card'>Add to Cart</button>
                         </div>
                     </div>
         </>

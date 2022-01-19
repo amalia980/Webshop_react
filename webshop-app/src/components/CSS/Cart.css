@@ -1,7 +1,7 @@
 .cart-dropdown {
     position: absolute;
     width: 240px;
-    height: 340px;
+    height: 540px;
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -15,7 +15,6 @@
 }
 
 .header{
-    margin: auto;
     width: 90%;
     height: 15%;
     display: flex;

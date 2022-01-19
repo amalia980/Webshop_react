@@ -28,9 +28,9 @@ om cart inter är synlig returneras istället en knapp "Cart" med ett onClick ev
 -Egen styling på basketknapparna. className="cartBtn" + badge för antal items i cart i Navbar.css
 
 Importera produkter i Cart -
-i shop: addToCart() funktionen filterar produkter som är lika och skapar en ny array för att gruppera lika produkter i varukorgen.
-Sätter en quantity propery på produkten för att visa hur många det är av varje vara i varukorgen.
-kallar på setCart som skapar en ny array med producterna i cart
+I DisplayProds har vi en addToCart funktion + onClick på 'Add to Cart' knappen
+
+
 
 Hooks mapp-
 useRemoveArrayDuplicates 
