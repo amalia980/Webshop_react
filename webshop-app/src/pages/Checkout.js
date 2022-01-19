@@ -3,6 +3,7 @@ import './CSS/Checkout.css'
 import {UserContext} from '../context/UserContext'
 
 
+
 const Checkout = () => {
 
    const {user} = useContext(UserContext)
@@ -26,6 +27,7 @@ const Checkout = () => {
    const sendOrder = (e) => {
        e.preventDefault();
        alert(JSON.stringify(deliveryInfo))
+       console.log(deliveryInfo)
    }
 
     return (

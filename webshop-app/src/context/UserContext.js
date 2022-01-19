@@ -3,9 +3,9 @@ import { createContext, useState } from "react";
 export const UserContext = createContext();
 
 const UserProvider = ({children}) => {
+ 
   const [loggedIn, setLoggedIn] = useState(false);
 
- 
 
   const [user, setUser] = useState({
     firstname: "", 
