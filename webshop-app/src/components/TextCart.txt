@@ -9,6 +9,8 @@ Skapar en funktion som heter CartProvider som tar in sina {children} som en prop
 State för basket, set basket som är en tom array by default där vi sedan kan lägga till produkter.
 State för CartVisible, setCartVisible. Boolean satt som default false vilket betyder att den inte syns.
 Return - Med hjälp utav provider skickar vi värden till CartContext barn så att vi kan använda dessa states i alla barnkomponenter. 
+clickListener på checkoutknappen så den stängs när man kommer till checkout.
+
 
 index.js -
 wrappar <CartProvider> runt app komponenten i index.js

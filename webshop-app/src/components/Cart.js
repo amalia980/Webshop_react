@@ -10,7 +10,8 @@ import products from "../services/products";
 
 
 export default function Cart() {
-    const { cart, setCart } = useContext(CartContext) 
+    const { cart, setCart, cartVisible } = useContext(CartContext) 
+    
    
     const priceArray = cart.map((p) => p.price);
     
@@ -42,7 +43,7 @@ export default function Cart() {
           )}
       </div>
       <p>Total price: {priceArray.length > 0 ? priceArray.reduce((total, price) => total + price) : "0"} kr</p>
-      <Link className="checkoutBtn" to="/checkout"> CHECKOUT </Link>
+      <Link onClick={cartVisible} className="checkoutBtn" to="/checkout"> CHECKOUT </Link>
     </div>
     )
     };
