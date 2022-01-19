@@ -39,6 +39,16 @@
     font-size: 1.3rem;
 }
 
+/*Tillagt för att positionera cart och loginbutton bredvid varandra / Maia*/
+.navButtons {
+    display: flex;
+    flex-direction: row;
+}
+
+.navCartLogged {
+    margin-left: 80%;
+}
+
 /*Cart*/
 .cartBtn {
     cursor: pointer;
@@ -47,7 +57,7 @@
     color:#212121;;
     margin-right: 2.5rem;
     font-size: 1rem;
-    padding:  .4rem .7rem;
+    padding:  .5rem .7rem;
     border-radius: 5%;
     
 }
@@ -57,3 +67,15 @@
     color: white;
     border: 1px solid white;
 }
+
+.badge {
+    position: absolute;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 250px;
+    background-color: #ff3333;
+    color: white;
+    font-size: 1rem;
+    z-index: 3000;
+  }
+  

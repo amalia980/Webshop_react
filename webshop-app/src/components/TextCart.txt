@@ -5,24 +5,32 @@ Länk till checkout.
 
 CartContext.js -
 Skapar ett context som heter CartContext.
-Skapar en funktion som heter BasketProvider som tar in sina {children} som en prop.
+Skapar en funktion som heter CartProvider som tar in sina {children} som en prop.
 State för basket, set basket som är en tom array by default där vi sedan kan lägga till produkter.
-State för basketVisible, setBasketVisible. Boolean satt som default false vilket betyder att den inte syns.
-Return - Med hjälp utav provider skickar vi värden till BasketContext barn så att vi kan använda dessa states i alla barnkomponenter. 
+State för CartVisible, setCartVisible. Boolean satt som default false vilket betyder att den inte syns.
+Return - Med hjälp utav provider skickar vi värden till CartContext barn så att vi kan använda dessa states i alla barnkomponenter. 
 
 index.js -
-wrappar <BasketProvider> runt app komponenten i index.js
+wrappar <CartProvider> runt app komponenten i index.js
 
 Navbar.js -
 Importerar CarttContext.
-Definierar att basketVisible och setCartVisible ska användas från BasketContext.
-Skapar en konstant som heter handleBasketVisibility vilket returnerar en funktion bed ett ternary expression.
-om basket är synlig returneras en knapp "Close basket" med ett onClick event som ändrar setBasketVisible till (false) och alltså döljer basket. 
-om basket inter är synlig returneras istället en knapp "Basket" med ett onClick event på sig som sääter setBasketVisible till true och alltså visar basket.
-{handleBasketVisibility()} funktionen är satt i LoggedIn tillsammans med 
+Definierar att CartVisible och setCartVisible ska användas från CartContext.
+Skapar en konstant som heter handleCartVisibility vilket returnerar en funktion bed ett ternary expression.
+om cart är synlig returneras en knapp "Close Cart" med ett onClick event som ändrar setBasketVisible till (false) och alltså döljer basket. 
+om cart inter är synlig returneras istället en knapp "Cart" med ett onClick event på sig som sääter setBasketVisible till true och alltså visar basket.
+{handleCartVisibility()} funktionen är satt i LoggedIn och LoggedOut tillsammans med 
 {cartVisible && <Cart />} som visar Cart om cartVisible är true
+<span className="badge" >{cart.length}</span> räknar ut längden på items i cart och visar det som ett litet tal på knappen
 
--Egen styling på basketknapparna. className="basketBtn" i Navbar.css
+-Egen styling på basketknapparna. className="cartBtn" + badge för antal items i cart i Navbar.css
+
+Importera produkter i Cart -
+i shop: addToCart() funktionen filterar produkter som är lika och skapar en ny array för att gruppera lika produkter i varukorgen.
+Sätter en quantity propery på produkten för att visa hur många det är av varje vara i varukorgen.
+kallar på setCart som skapar en ny array med producterna i cart
+
+Hooks mapp-
+useRemoveArrayDuplicates 
 
 
-ta bort cart styling från shop
