@@ -32,7 +32,7 @@ const products = [
         id: 5
     },
     {
-        title: "Claude Monet - The Japanese Footbridge",
+        title: "Claude Monet - The Japanese...",
         price: "110 000 000",
         img: "https://live.staticflickr.com/7181/7034361895_94dec797d7_b.jpg",
         id: 6
@@ -50,7 +50,7 @@ const products = [
         id: 8
     },
     {
-        title: "Salvador Dali - Metamorphosis of...",
+        title: "Salvador Dali - Metamorphosis...",
         price: "570 000 000",
         img: "https://live.staticflickr.com/5127/5311661578_5cd32585f6_b.jpg",
         id: 9
@@ -62,7 +62,7 @@ const products = [
         id: 10
     },
     {
-        title: "Jacques Louis David - The Oath of...",
+        title: "Jacques Louis David - The Oath...",
         price: "4500 000 000",
         img: "https://cdn2.picryl.com/photo/1786/12/31/jacques-louis-david-oath-of-the-horatii-google-art-project-87aab0-1024.jpg",
         id: 11
