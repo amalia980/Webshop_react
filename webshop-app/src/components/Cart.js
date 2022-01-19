@@ -9,6 +9,7 @@ import { CartContext } from "../context/CartContext";
 import products from "../services/products";
 
 
+
 export default function Cart() {
     const { cart, setCart } = useContext(CartContext) 
    

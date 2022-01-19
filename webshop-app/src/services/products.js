@@ -14,7 +14,7 @@ const products = [
         id: 2
     },
     {
-        title: "Edvard Much -  The Scream",
+        title: "Edvard Munch -  The Scream",
         price: "700 500 000",
         img: "https://upload.wikimedia.org/wikipedia/commons/3/34/Edvard-Munch-The-Scream.jpg",
         id: 3
@@ -75,5 +75,6 @@ const products = [
     },
 
 ]
+
 
 export default products;
