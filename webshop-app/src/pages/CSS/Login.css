@@ -1,6 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+.loginContainer {
+    width:100%;
+    height: 91.5vh;
+    background-image: url('https://wallpapercave.com/wp/wp2186239.jpg');
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .loginForm {
-    margin:auto;
-    margin-top:25px;
     padding: 15px;
     width: 200px;
     height: auto;
@@ -9,10 +19,18 @@
     justify-content: center;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     border-radius: 5px;
+    background-color: rgba(218, 228, 238, 0.883);
+}
+
+.loginForm input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid black;
 }
 
 .loginForm h1, h2 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Parisienne', cursive;
 }
 
 .loginForm input:focus {
@@ -20,20 +38,34 @@
 }
 
 .loginForm button {
-    padding:4px;
-    background-color: white; 
-    color: black; 
-    border: 2px solid #4CAF50;
-    border-radius: 3px;
+	box-shadow: 0px 10px 14px -7px #3e7327;
+	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+	background-color:#77b55a;
+	border-radius:4px;
+	border:1px solid #4b8f29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:8px 17px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #5b8a3c;
 }
 
 .loginForm button:hover {
-    background-color: #4CAF50;
-    color: white;
+    background:linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+	background-color:#72b352;
+}
+
+.loginForm button:active {
+    position:relative;
+	top:1px;
 }
 
 .loginForm input, button {
-    margin-top:5px;
+    margin-top:15px;
 }
 
 .loginForm h2 {

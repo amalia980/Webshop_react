@@ -21,6 +21,7 @@ const Login = () => {
 
   return (
   <>
+  <div className="loginContainer">
   <div className="loginForm">
      <h1>Login</h1>
       <form onSubmit={handleLoginUser}>
@@ -33,6 +34,7 @@ const Login = () => {
        <input name="zipCode" placeholder="Zip Code" onChange={handleInput} />
         <button className="loginButton" type="submit">Login</button>
        </form>
+    </div>
     </div>
   </>
   )};
