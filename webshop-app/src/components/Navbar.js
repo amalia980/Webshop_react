@@ -6,8 +6,10 @@ import { CartContext } from "../context/CartContext.js";
 import "./CSS/Navbar.css";
 
 const Navbar = () => {
-  const { loggedIn, setLoggedIn } = useContext(UserContext);
+  const { loggedIn, setLoggedIn, setUser } = useContext(UserContext);
   const { cartVisible, setCartVisible} = useContext(CartContext); //basket state
+  
+  
 
   //Basket visibility. Om basketVisible är true visas en knapp för att stänga varukorgen annars visas en knapp för att öppna den.
   const handleCartVisibility = () => {
@@ -19,6 +21,7 @@ const Navbar = () => {
 
   const handleLogOut = () => {
     setLoggedIn(false);
+    setUser({})
     navigate("/login");
   };
 
