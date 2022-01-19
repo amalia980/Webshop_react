@@ -47,8 +47,9 @@ export default function Cart() {
             )}
         </div>
 
-        <p>Total price: {""} {priceArray.length > 0
+         <p>Total price: {""} {priceArray.length > 0
          ? priceArray.reduce((total, price) => total + price) : "0"}{""}kr</p>
+
 
         <Link onClick={cartVisible} className="checkoutBtn" to="/checkout"> CHECKOUT </Link>
       </div>
