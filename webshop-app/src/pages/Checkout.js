@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react'
+import React, {useState, useContext, useEffect} from 'react'
 import './CSS/Checkout.css'
 import {UserContext} from '../context/UserContext'
 import { CartContext } from "../context/CartContext";
@@ -24,9 +24,14 @@ const Checkout = () => {
 
 
    const {user} = useContext(UserContext)
+   
+    //uppdaterar products som finns i carten, vi lägger in cart i [] så att useEffecten triggas 
+   //om carten förändras (produkt läggs till, tas bort)
+   useEffect(() => {
+    setAdressInfo({...adressInfo, products: filteredCart})
+   },[cart])
 
-
-   const [deliveryInfo, setDeliveryInfo] = useState({
+   const [adressInfo, setAdressInfo] = useState({
        firstname: user.firstname || "",
        lastname: user.lastname ||  "",
        adress: user.adress || "",
@@ -36,15 +41,15 @@ const Checkout = () => {
    })
    
   const handleInput = (e) => {
-    setDeliveryInfo({ ...deliveryInfo, [e.target.name]: e.target.value });
+    setAdressInfo({ ...adressInfo, [e.target.name]: e.target.value });
   };
 
    const sendOrder = (e) => {
        e.preventDefault();
-       alert(JSON.stringify(deliveryInfo))
-       console.log(deliveryInfo)
+       alert(JSON.stringify(adressInfo))
+       console.log(adressInfo)
    }
-
+   
     return (
         <div className="bodyCheckout">
           <div className='cart-wrap-checkout'>
@@ -82,46 +87,49 @@ const Checkout = () => {
     
             <h2>We send your product to this Adress:</h2>
             <form onSubmit={sendOrder} className="checkoutForm">
-           
+            <label>Firstname</label>
             <input
                 className="checkoutInput"
                 name="firstname"
                 placeholder="Firstname"
                 onChange={handleInput}
-                value={deliveryInfo.firstname}
+                value={adressInfo.firstname}
                 required
               />
+              <label>Lastname</label>
               <input
                 className="checkoutInput"
                 name="lastname"
                 placeholder="Lastname"
                 onChange={handleInput}
-                value={deliveryInfo.lastname}
+                value={adressInfo.lastname}
                 required
               />
+              <label>Adress</label>
               <input
                 className="checkoutInput"
                 name="adress"
                 placeholder="Adress"
                 onChange={handleInput}
-                value={deliveryInfo.adress}
+                value={adressInfo.adress}
                 required
               />
-            
+              <label>Zipcode</label>
               <input
                 className="checkoutInput"
                 name="zipCode"
                 placeholder="Zip code"
                 onChange={handleInput}
-                value={deliveryInfo.zipCode}
+                value={adressInfo.zipCode}
                 required
               />
+              <label>City</label>
               <input
                 className="checkoutInput"
                 name="city"
                 placeholder="City"
                 onChange={handleInput}
-                value={deliveryInfo.city}
+                value={adressInfo.city}
                 required
               />
              <button className="checkoutButton" type='submit'>Make purchase</button>
