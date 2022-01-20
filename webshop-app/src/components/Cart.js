@@ -27,31 +27,37 @@ export default function Cart() {
 
     return ( 
       <div className="cart-dropdown">
-          <div className='header'>
-          <h3 className='heading'>Shopping Cart</h3>
-          </div>
-
+            <h3 className='heading'>Shopping Cart</h3>
         <div className="cart-items">
           {cart.length <= 0 &&
             <p className="empty-message"> Your cart is empty...</p>
           }
 
           {cart.length > 0 && filteredCart.map((product) =>
-            <div key={product.id}>
-              <p>
-              {product.title} {product.qty} st <br />
-                  {product.price * product.qty} kr
-              </p>
-              <button onClick={() => removeProduct(product.id)}> Remove </button>
+            
+            <div className="product" key={product.id}>
+
+              <div className="imgBox">
+                <img className="productImg" src={product.img} alt={product.title}/>
+              </div>
+
+              <div className="productText">
+                <span className="title">{product.title}</span> <br /> 
+                <span className="qty">{product.qty}</span> st <br />
+                <button className="removeBtn" onClick={() => removeProduct(product.id)}> Remove </button>        
+              </div>
+
+              <p className="price">${product.price * product.qty}</p>
+
             </div>
             )}
         </div>
-
-         <p>Total price: {""} {priceArray.length > 0
-         ? priceArray.reduce((total, price) => total + price) : "0"}{""}kr</p>
-
-
+        <hr />
+        <div className="checkoutStyle">
+         <p className="totalPrice">Total price: ${priceArray.length > 0
+         ? priceArray.reduce((total, price) => total + price) :  "0"}</p>
         <Link className="checkoutBtn" to="/checkout"> CHECKOUT </Link>
+        </div>
       </div>
     )};
 
