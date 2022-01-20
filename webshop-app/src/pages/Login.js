@@ -33,6 +33,8 @@ const Login = () => {
        <input name="city" placeholder="City" onChange={handleInput} />
        <input name="zipCode" placeholder="Zip Code" onChange={handleInput} />
         <button className="loginButton" type="submit">Login</button>
+        
+        <p className="pform">This is a private shop, for registration contact support</p>
        </form>
     </div>
     </div>
