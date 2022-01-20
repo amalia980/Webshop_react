@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
+
 const DisplayProds = (props) => {
     const { cart, setCart } = useContext(CartContext);
     const {product} = props;
+
     
     const addToCart = () => {
         const same = cart.filter((item) => item === product)
