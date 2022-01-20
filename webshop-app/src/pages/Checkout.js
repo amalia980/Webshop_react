@@ -47,33 +47,39 @@ const Checkout = () => {
 
     return (
         <div className="bodyCheckout">
-
-           
-          <div className="cartCheckout">
-            <div className='header'>
-              <h3 className='heading'>Shopping Cart</h3>
-            </div>
-
-            <div className="cartItemsCheckout">
+          <div className='cart-wrap-checkout'>
+          <p className="totalPrice-checkout">Total price: ${priceArray.length > 0
+              ? priceArray.reduce((total, price) => total + price) :  "0"}
+            </p>
+ 
+            <div className="cart-items-checkout">
               {cart.length <= 0 &&
-                <p className="empty-message"> Your cart is empty...</p>}
+                <p className="empty-message-checkout"> Your cart is empty...</p>
+              }
 
               {cart.length > 0 && filteredCart.map((product) =>
-                <div key={product.id}>
-                  <img className="productImgCheckout" src={product.img} alt={product.title}/>
-                  <p>{product.title} {product.qty} st <br />
-                      {product.price * product.qty} kr</p>
-                  <button onClick={() => removeProduct(product.id)}> Remove </button>
+                
+                <div className="product-checkout" key={product.id}>
+
+                  <div className="imgBox-checkout">
+                    <img className="img-checkout" src={product.img} alt={product.title}/>
+                  </div>
+
+                  <div className="productText-checkout">
+                    <span className="title-checkout">{product.title}</span> <br /> 
+                    <span className="qty-checkout">{product.qty}</span> st <br />
+                    <button className="removeBtn-checkout" onClick={() => removeProduct(product.id)}> Remove </button>        
+                  </div>
+
+                  <p className="price-checkout">${product.price * product.qty}</p>
                 </div>
-              )}
-          </div>
-          <p>Total price: {""} {priceArray.length > 0
-          ? priceArray.reduce((total, price) => total + price) : "0"}{""}kr</p>
+                )}
           </div>
 
-             
+      </div>
             
             <div className="checkoutFormWrapper">
+    
             <h2>We send your product to this Adress:</h2>
             <form onSubmit={sendOrder} className="checkoutForm">
            

@@ -1,6 +1,6 @@
 .cart-dropdown {
     position: absolute;
-    width: 240px;
+    width: 540px;
     height: 540px;
     display: flex;
     flex-direction: column;
@@ -15,22 +15,19 @@
 }
 
 .header{
-    width: 90%;
-    height: 15%;
     display: flex;
     justify-content: space-between;
     align-items: center;
    }
 .heading{
     font-size: .9rem;
-    font-family: ‘Open Sans’;
     font-weight: 700;
-    color: #212121;
-    
+    color: #212121;  
    }
 
 .cart-items {
-    height: 240px;
+    height: 340px;
+    margin: auto;
     display: flex;
     flex-direction: column;
     overflow: scroll;
@@ -40,12 +37,55 @@
     display: none;
 }
 
+.product {
+    padding: 5px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+
+.imgBox {
+    padding-right: 15px;  
+    text-align: center;
+}
+
+.productImg {
+    height: 6rem ;
+    width: 6rem ;
+    object-fit: cover;
+}
+
+.title{
+    padding-top: 5px;
+    line-height: 10px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #202020;
+   }
+
+.qty{
+    line-height: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #636363;
+   }
 
 .empty-message {
     
     font-size: 18px;
     margin: 50% auto;
     }
+
+.removeBtn {
+    background-color: unset;
+    border:unset;
+    color: red;
+    margin-right: 2.5rem;
+    font-size: .8rem;
+    border-bottom: 1px solid red;
+    cursor: pointer;
+
+}
 
 .checkoutBtn {
     display: flex;
@@ -58,10 +98,35 @@
     border-radius: 10px;
     border: none;
     background-color: rgb(197, 197, 197);
+    font-weight: 600;
     cursor: pointer;
+}
+.checkoutBtn:hover {
+    background-color:rgb(173, 173, 173);
 }
   
 a {
     text-decoration: none;
     color: #212121;
 }
+
+.checkoutStyle {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.totalPrice{
+    padding-right: 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #202020;
+   }
+
+.price{
+    font-size: 1rem;
+    font-weight: 700;
+    color: #202020;
+}
+
