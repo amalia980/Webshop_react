@@ -6,12 +6,14 @@ import useRemoveArrayDuplicates from "../hooks/useRemoveArrayDuplicates";
 //context
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
+import {UserContext} from "../context/UserContext"
 
 
 
 
 export default function Cart() {
-
+    
+    const {user} = useContext(UserContext)
     const { cart, setCart} = useContext(CartContext) 
     const filteredCart = useRemoveArrayDuplicates(cart)
 
@@ -56,7 +58,7 @@ export default function Cart() {
         <div className="checkoutStyle">
          <p className="totalPrice">Total price: ${priceArray.length > 0
          ? priceArray.reduce((total, price) => total + price) :  "0"}</p>
-        <Link className="checkoutBtn" to="/checkout"> CHECKOUT </Link>
+  <Link className="checkoutBtn" to={`/checkout/${user.firstname}/${user.lastname}`}> CHECKOUT </Link>
         </div>
       </div>
     )};
