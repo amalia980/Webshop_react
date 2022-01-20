@@ -8,13 +8,13 @@ const UserProvider = ({children}) => {
  
 
   const [user, setUser] = useState({
-    firstname: "", 
-    lastname: "",
-    password: "",
-    adress: "",
-    city: "",
-    zipCode: "",
-  });
+     firstname: "", 
+     lastname: "",
+     password: "",
+     adress: "",
+     city: "",
+     zipCode: "",
+   });
 
  
   

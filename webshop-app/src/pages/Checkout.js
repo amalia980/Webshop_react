@@ -5,20 +5,21 @@ import {UserContext} from '../context/UserContext'
 
 const Checkout = () => {
 
+
    const {user} = useContext(UserContext)
-
-
-   const [deliveryInfo, setDeliveryInfo] = useState({
-       firstname: user.firstname || "",
-       lastname: user.lastname ||  "",
-       adress: user.adress || "",
-       city: user.city || "",
-       zipCode: user.zipCode || "",
-       products: []
-   })
-
-
    
+
+
+     const [deliveryInfo, setDeliveryInfo] = useState({
+         firstname: user.firstname || "",
+         lastname: user.lastname ||  "",
+         adress: user.adress || "",
+         city: user.city || "",
+         zipCode: user.zipCode || "",
+         products: []
+     })
+
+
   const handleInput = (e) => {
     setDeliveryInfo({ ...deliveryInfo, [e.target.name]: e.target.value });
   };
@@ -27,6 +28,7 @@ const Checkout = () => {
        e.preventDefault();
        alert(JSON.stringify(deliveryInfo))
    }
+
 
     return (
         <div className="bodyCheckout">
