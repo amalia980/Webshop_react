@@ -12,7 +12,7 @@ import { CartContext } from "../context/CartContext";
 
 export default function Cart() {
 
-    const { cart, setCart, cartVisible } = useContext(CartContext) 
+    const { cart, setCart} = useContext(CartContext) 
     const filteredCart = useRemoveArrayDuplicates(cart)
 
     console.log("filtered:",filteredCart);
@@ -51,7 +51,7 @@ export default function Cart() {
          ? priceArray.reduce((total, price) => total + price) : "0"}{""}kr</p>
 
 
-        <Link onClick={cartVisible} className="checkoutBtn" to="/checkout"> CHECKOUT </Link>
+        <Link className="checkoutBtn" to="/checkout"> CHECKOUT </Link>
       </div>
     )};
 
