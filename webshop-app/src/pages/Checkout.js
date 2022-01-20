@@ -17,16 +17,15 @@ const Checkout = () => {
   const priceArray = cart.map((p) => p.price);
   
 
- 
   const removeProduct = (id) => {
     setCart([...cart].filter((product) => product.id !== id))
   }
-
 
    const {user} = useContext(UserContext)
    
     //uppdaterar products som finns i carten, vi lägger in cart i [] så att useEffecten triggas 
    //om carten förändras (produkt läggs till, tas bort)
+
    useEffect(() => {
     setAdressInfo({...adressInfo, products: filteredCart})
    },[cart])
